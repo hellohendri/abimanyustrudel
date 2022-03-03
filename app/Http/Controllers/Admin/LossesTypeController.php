@@ -23,7 +23,7 @@ class LossesTypeController extends Controller
         $admiko_data['sideBarActive'] = "losses_type";
 		$admiko_data["sideBarActiveFolder"] = "";
         
-        $tableData = LossesType::orderByDesc("id")->get();
+        $tableData = LossesType::orderBy("id", 'ASC')->get();
         return view("admin.losses_type.index")->with(compact('admiko_data', "tableData"));
     }
 

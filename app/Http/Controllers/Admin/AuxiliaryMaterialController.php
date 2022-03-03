@@ -23,7 +23,7 @@ class AuxiliaryMaterialController extends Controller
         $admiko_data['sideBarActive'] = "auxiliary_material";
 		$admiko_data["sideBarActiveFolder"] = "dropdown_expense";
         
-        $tableData = AuxiliaryMaterial::orderByDesc("id")->get();
+        $tableData = AuxiliaryMaterial::orderBy("id", 'ASC')->get();
         return view("admin.auxiliary_material.index")->with(compact('admiko_data', "tableData"));
     }
 

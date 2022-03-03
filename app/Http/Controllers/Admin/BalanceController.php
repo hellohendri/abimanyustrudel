@@ -24,7 +24,7 @@ class BalanceController extends Controller
         $admiko_data['sideBarActive'] = "balance";
 		$admiko_data["sideBarActiveFolder"] = "";
         
-        $tableData = Balance::orderByDesc("id")->get();
+        $tableData = Balance::orderBy("id", 'ASC')->get();
         return view("admin.balance.index")->with(compact('admiko_data', "tableData"));
     }
 

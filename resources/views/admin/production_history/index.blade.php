@@ -13,6 +13,14 @@
 @section('content')
 <div class="card production_history_index admikoIndex">
     <div class="card-body">
+        <form action="/" method="GET">
+            <div class="input-group mb-3">
+                <input type="date" class="form-control" name="start_date">
+                <input type="date" class="form-control" name="end_date">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+        <h5>Total Biaya Produksi : 1.234.567</h5>
         <div class="tableBox" id="tableBox">
             <div class="row">
                 <div class="col-12 d-flex justify-content-between">

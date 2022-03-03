@@ -13,6 +13,9 @@
 @section('content')
 <div class="card balance_index admikoIndex">
     <div class="card-body">
+        <h2>Total Balance</h2>
+        <h3>Cash :</h3>
+        <h3>Bank :</h3>
         <div class="tableBox" id="tableBox">
             <div class="row">
                 <div class="col-12 d-flex justify-content-between">
@@ -30,7 +33,7 @@
                 </div>
             </div>
             <div class="tableLayout pb-2">
-                                <table class="table tableSort" style="width:100%" data-dom="ltrip">
+                <table class="table tableSort" style="width:100%" data-dom="ltrip">
                     <thead>
                         <tr data-sort-method='thead'>
 							<th scope="col" class="w-5" data-sort-method="number" >ID</th>

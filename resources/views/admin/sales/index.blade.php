@@ -38,10 +38,10 @@
                             <th scope="col" class="w-5" data-sort-method="number">ID</th>
                             <th scope="col" class="text-nowrap">Nama</th>
                             <th scope="col" class="text-nowrap d-none d-sm-table-cell">Jumlah</th>
+                            <th scope="col" class="text-nowrap d-none d-lg-table-cell">Subtotal</th>
                             <th scope="col" class="d-none d-md-table-cell">Tanggal</th>
                             <th scope="col" class="text-nowrap d-none d-lg-table-cell">Metode Pembayaran</th>
                             <th scope="col" class="text-nowrap d-none d-lg-table-cell">Status Pembayaran</th>
-                            <th scope="col" class="text-nowrap d-none d-lg-table-cell">Subtotal</th>
                             <th scope="col" class="w-5 no-sort" data-orderable="false">{{trans("admiko.table_edit")}}</th>
                             @if(Gate::allows('sales_allow'))
                             <th scope="col" class="w-5 no-sort" data-orderable="false">{{trans('admiko.table_delete')}}</th>
@@ -54,10 +54,10 @@
                             <td class="w-5"><a href="{{route("admin.sales.edit",[$data->id])}}">{{$data->id}}</a></td>
                             <td class="text-nowrap">{{$data->nama_id->nama??""}}</td>
                             <td class="text-nowrap d-none d-sm-table-cell">{{$data->jumlah}}</td>
+                            <td class="text-nowrap d-none d-lg-table-cell">123.456</td>
                             <td class="d-none d-md-table-cell">{{$data->tanggal}}</td>
                             <td class="text-nowrap d-none d-lg-table-cell">{{$data->metode_pembayaran_id->metode_pembayaran??""}}</td>
                             <td class="text-nowrap d-none d-lg-table-cell">{{$data->status_pembayaran_id->status_pembayaran??""}}</td>
-                            <td class="text-nowrap d-none d-lg-table-cell">subtotal</td>
                             <td class="w-5 no-sort"><a href="{{route("admin.sales.edit",[$data->id])}}"><i class="fas fa-edit fa-fw"></i></a></td>
                             @if(Gate::allows(['sales_allow']))
                             <td class="w-5 no-sort">

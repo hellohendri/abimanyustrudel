@@ -20,7 +20,7 @@
                 <button class="btn btn-primary" type="submit">Submit</button>
             </div>
         </form>
-        <h5>Total Biaya Produksi : 1.234.567</h5>
+        <h5>Total Biaya Produksi : {{"Rp " . number_format($totalCost, 2, ".", ",")}}</h5>
         <div class="tableBox" id="tableBox">
             <div class="row">
                 <div class="col-12 d-flex justify-content-between">
@@ -41,7 +41,7 @@
                                 <table class="table tableSort" style="width:100%" data-dom="ltrip">
                     <thead>
                         <tr data-sort-method='thead'>
-							<th scope="col" class="w-5" data-sort-method="number" >ID</th>
+							<!-- <th scope="col" class="w-5" data-sort-method="number" >ID</th> -->
 							<th scope="col" class="text-nowrap">Nama</th>
 							<th scope="col" class="text-nowrap d-none d-sm-table-cell">Jenis</th>
 							<th scope="col" class="text-nowrap d-none d-md-table-cell">Jumlah</th>
@@ -57,7 +57,7 @@
                     <tbody>
                     @foreach($tableData as $data)
                         <tr>
-							<td class="w-5"><a href="{{route("admin.production_history.edit",[$data->id])}}">{{$data->id}}</a></td>
+							<!-- <td class="w-5"><a href="{{route("admin.production_history.edit",[$data->id])}}">{{$data->id}}</a></td> -->
 							<td class="text-nowrap">{{$data->nama}}</td>
 							<td class="text-nowrap d-none d-sm-table-cell">{{$data->jenis_id->jenis_roti??""}}</td>
 							<td class="text-nowrap d-none d-md-table-cell">{{$data->jumlah}}</td>

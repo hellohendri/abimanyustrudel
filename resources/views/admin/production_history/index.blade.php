@@ -20,7 +20,38 @@
                 <button class="btn btn-primary" type="submit">Submit</button>
             </div>
         </form>
-        <h5>Total Biaya Produksi : {{"Rp " . number_format($totalCost, 2, ".", ",")}}</h5>
+        <div class="container" style="padding: 0px !important">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card" style="margin-bottom: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Biaya Produksi</h5>
+                            <h5 class="card-text">{{"Rp " . number_format($totalCost, 2, ".", ",")}}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="col-sm">
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Biaya Produksi Pastry</h5>
+                                <h5 class="card-text">{{"Rp " . number_format($costPastry, 2, ".", ",")}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="col-sm">
+                        <div class="card" style="margin-bottom: 10px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Biaya Produksi Strudel</h5>
+                                <h5 class="card-text">{{"Rp " . number_format($costStrudel, 2, ".", ",")}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="tableBox" id="tableBox">
             <div class="row">
                 <div class="col-12 d-flex justify-content-between">

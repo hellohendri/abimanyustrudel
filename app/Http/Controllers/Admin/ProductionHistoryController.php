@@ -25,11 +25,21 @@ class ProductionHistoryController extends Controller
 		$admiko_data["sideBarActiveFolder"] = "";
 
         $totalCost = 0;
+        $costPastry = 0;
+        $costStrudel = 0;
         $tableData = ProductionHistory::orderByDesc("id")->get();
+        $dataStrudel = ProductionHistory::where("jenis", 3)->get();
+        $dataPastry = ProductionHistory::where("jenis", 4)->get();
         foreach ($tableData as $cost) {
             $totalCost += $cost->hpp * $cost->jumlah;
         }
-        return view("admin.production_history.index")->with(compact('admiko_data', "tableData", "totalCost"));
+        foreach ($dataPastry as $cost) {
+            $costPastry += $cost->hpp * $cost->jumlah;
+        }
+        foreach ($dataStrudel as $cost) {
+            $costStrudel += $cost->hpp * $cost->jumlah;
+        }
+        return view("admin.production_history.index")->with(compact('admiko_data', "tableData", "totalCost", "costPastry", "costStrudel"));
     }
 
     public function create()

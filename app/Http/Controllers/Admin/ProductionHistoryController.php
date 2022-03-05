@@ -27,7 +27,7 @@ class ProductionHistoryController extends Controller
         $totalCost = 0;
         $costPastry = 0;
         $costStrudel = 0;
-        $tableData = ProductionHistory::orderByDesc("id")->get();
+        $tableData = ProductionHistory::orderByDesc("tanggal_produksi")->get();
         $dataStrudel = ProductionHistory::where("jenis", 3)->get();
         $dataPastry = ProductionHistory::where("jenis", 4)->get();
         foreach ($tableData as $cost) {
